@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单信息</title>
+</head>
+<style>
+     *{
+         margin: 0;
+         padding: 0;
+         text-decoration: none;
+     }
+     body{
+         background-color: #999999;
+         
+     }
+     html{
+         font-size: 100px;
+     }
+     /* .Popup{
+         width: 13rem;
+         height: 5.8rem;
+      
+         margin: 0 auto;
+     } */
+     .Payment-page{
+        width: 11rem;
+         height: 5.8rem;
+         background-color: #FFFF;
+        margin-top: 60px;
+        border-radius: 0.2rem;
+        
+     }
+     .nav-Payment-page{
+        width: 100%;
+        height: 12%;
+        background-color: #f5f5f5;
+        border-top-left-radius: 0.2rem;
+        border-top-right-radius: 0.2rem;
+        display: flex;
+        justify-content: space-between;
+     }
+/*  */
+     .text-Popup{
+         font-size: 0.24rem;
+         font-weight: 500;
+         color: rgba(51, 51, 51, 1);
+         margin-left: 0.21rem;
+    margin-top: 0.17rem;
+     }
+     .tetx-return{
+         width: 0.82rem;
+         height: 0.3rem;
+         font-size: 0.2rem;
+         font-weight: 400;
+         color: rgba(239, 73, 77, 1);
+         line-height: 0.3rem;
+         border: 2px #ef494d solid;
+         border-radius: 50px;
+         text-align: center;
+         margin-top: 0.17rem;
+         margin-right: 0.25rem;
+        
+     }
+     .tetx-return>a{
+        color: #ef494d;
+        width: 0.39rem;
+         height: 0.19rem;
+         font-size: 0.16rem;
+         font-weight: 400;
+         color: rgba(239, 73, 77, 1);
+         line-height: 15px;
+     }
+     .list-order{
+         font-size: 0.2rem;
+         margin-left: 0.43rem;
+    margin-top: 0.41rem;
+     }
+     .frame{
+         content: "";
+         display: inline-block;
+         width: 0.06rem;
+         height: 0.15rem;
+         border-left:  3px solid  #f05356;
+         /* margin-left: 0.35rem;
+         margin-top: 0.3rem; */
+        
+     }
+     .Order-information-list{
+         height: 0.25rem;
+         /* background-color: red; */
+         margin-top: 0.2rem;
+         display: flex;
+         justify-content: space-around;
+         position: relative;
+         
+     }
+     .list-text-first{
+         font-size: 0.12rem;
+     }
+     /* .elastic{
+         display: flex;
+         justify-content: space-around;
+     } */
+     .float{
+        margin-left: -0.37rem;
+     }
+     .Bold-font{
+         font-size: 0.12rem;
+          font-weight: bolder;
+         color: #333333;
+     }
+     .float-onw{
+        /* margin-left: -2.16rem;
+        float: left; */
+          position: absolute;
+          left: 1.11rem;
+          top: 0;
+     }
+     .float-omp{
+         margin-left: 0.5rem;
+     }
+     .Text-floating{
+         position: absolute;
+         left: 4.67rem;
+    top: 0px;
+     }
+     .Text-floating-two{
+       float: right;
+       margin-right: -7.32rem;
+     }
+     /*  */
+     .Second-positioning{
+        position: absolute;
+         left: 4.14rem;
+    top: 0px;
+
+     }
+     .Third-positioning{
+        position: absolute;
+          left: 0.91rem;
+          top: 0;
+     }
+     /*  */
+     .Absolute-positioning{
+        position: absolute;
+         left: 0.9rem;
+    top: 0.4rem;
+     }
+     /* .Button{
+         margin-top: 35px;
+         height: 50px;
+         /* background-color: red; */
+     /* }  */
+     .Button{
+        margin-top: 0.7rem;
+         font-size: 0.14rem;
+         display: flex;
+         justify-content: center;
+     }
+     .Button>div>a{
+         color: #FFFF;
+     }
+    .button-one{
+        width: 0.82rem;
+        height: 0.3rem;
+        /* border: solid 1px blue; */
+        border-radius: 20px;
+        background-color: #4977fc;
+        line-height: 30px;
+        text-align: center;
+        box-shadow: 0px  0px  8px 0px rgba(73, 119, 251, 0.5);
+    }
+    
+    .button-two{
+        width: 1.4rem;
+        height: 0.3rem;
+        /* border: solid 1px blue; */
+        border-radius: 20px;
+        background-color: #4977fc;
+        line-height: 0.3rem;
+        text-align: center;
+        box-shadow: 0px  0px  8px 0px rgba(73, 119, 251, 0.5);
+        margin:  0     0.18rem;
+    }
+    .button-three{
+        width: 1.15rem;
+        height: 0.3rem;
+        /* border: solid 1px blue; */
+        border-radius: 20px;
+        background-color: #4977fc;
+        line-height: 0.3rem;
+        text-align: center;
+        box-shadow: 0px  0px  8px 0px rgba(73, 119, 251, 0.5);
+    }
+        </style>
+<body>
+       <div class="Popup">
+           <div class="Payment-page">
+               <!-- 支付页面的背景颜色 -->
+                <div class="nav-Payment-page">
+                    <div class="text-Popup">支付页面</div>
+                    <div class="tetx-return">
+                        <a href=""> 返回</a>
+                    </div>
+                </div>
+                  <!--  -->
+                  <!-- <div class="frame"></div> -->
+                   <div class="list-order">
+                       <div class="frame"></div>
+                     订单信息
+                   </div>
+                     <!--  -->
+                     <div class="Order-information-list">
+                      <div class="list-text-first float">
+                          <span>
+                              <span class="Bold-font"> 下单人姓名 :</span>
+                              
+                              &nbsp &nbsp &nbsp &nbsp小南湖</span>
+                      </div>
+                      <div class="list-text-first">
+                        <span>
+                            <span class="Bold-font">下单人电话 ：</span>
+                            &nbsp &nbsp &nbsp &nbsp 13566894136</span>
+                      </div>
+                      <div class="list-text-first">
+                        <span>
+                            <span class="Bold-font">订单单号 :</span>
+                          
+                            &nbsp &nbsp &nbsp &nbsp 2020052616411643</span>
+                            
+                      </div>
+
+
+
+                     </div>
+                        <!--  -->
+                        <div class="  Order-information-list">
+                        <div class="list-text-first float-onw">
+                            <span>
+                                <span class="Bold-font"> 实付金额 ：</span>
+                                <span>&nbsp &nbsp  12</span>
+                        </div>
+                        <div class="list-text-first float-omp Text-floating">
+                            <span class="Bold-font">
+                                订单金额 ：
+                            </span>
+                          <span> &nbsp &nbsp &nbsp &nbsp 12 </span>
+                        </div>
+                        <div class="list-text-first Text-floating-two">
+                            <span class="Bold-font">补贴金额 ：</span>
+                          <span>   &nbsp &nbsp &nbsp &nbsp12</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="list-order">
+                        <div class="frame"></div>
+                      支付信息
+                    </div>
+                      <!--  -->
+                      <div class="Order-information-list">
+                       <div class="list-text-first float">
+                           <span>
+                               <span class="Bold-font"> 持卡人姓名 :</span>
+                               
+                               &nbsp &nbsp &nbsp &nbsp王老汉</span>
+                       </div>
+                       <div class="list-text-first">
+                         <span>
+                             <span class="Bold-font">持卡人身份证 ：</span>
+                             &nbsp &nbsp &nbsp &nbsp 321002169401640236</span>
+                       </div>
+                       <div class="list-text-first">
+                         <span>
+                             <span class="Bold-font">卡号 :</span>
+                           
+                             &nbsp &nbsp &nbsp &nbsp 2020052616411643</span>
+                             
+                       </div>
+ 
+ 
+ 
+                      </div>
+                         <!--  -->
+                         <div class="  Order-information-list">
+                         <div class="list-text-first float-onw Third-positioning">
+                             <span>
+                                 <span class="Bold-font"> 支付卡余额 ：</span>
+                                 <span>&nbsp &nbsp  390</span>
+                         </div>
+                         <div class="list-text-first float-omp Text-floating Second-positioning">
+                             <span class="Bold-font">
+                                 武汉市市补贴余额 ：
+                             </span>
+                           <span> &nbsp &nbsp &nbsp &nbsp 402 </span>
+                         </div>
+                         <div class="list-text-first Text-floating-two ">
+                             <span class="Bold-font">江汉区补贴 ：</span>
+                           <span>   &nbsp &nbsp &nbsp &nbsp12</span>
+                         </div>
+                         <div class="list-text-first float-onw Third-positioning Absolute-positioning"> 
+                             <span>
+                                <span class="Bold-font"> 市补贴比例 ：</span> 
+                                 <!-- <span>&nbsp &nbsp  12</span> -->
+                        </div>
+                     </div>
+                       <!--  -->
+
+                       <div class="Button">
+                           <div class="button-one">
+                             <a href="">读卡</a>
+                           </div>
+                           <div class="button-two">
+                                <a href="">银龄智慧卡支付</a>
+                           </div>
+                           <div class="button-three">
+                            <a href="">老年证支付</a>
+                        </div>
+                       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+           </div>
+       </div>   
+</body>
+</html>
+<script>
+(
+    function(){
+        function change(){
+            var root=1920;
+            var pix=root/100;
+            var view=document.documentElement.clientWidth||window.innerWidth;
+            var dpr=window.devicePixelRatio;
+                view=view*dpr;
+            if(view>=1920){
+                document.documentElement.style.fontSize=100+"px";
+            }
+            else{
+                document.documentElement.style.fontSize=view/pix+"px";
+            }
+            console.log(window.devicePixelRatio);
+        }
+        window.addEventListener("resize",change,false);
+        window.document.addEventListener("DOMContentLoaded",change,false);
+    }
+)()
+
+
+</script>
+
